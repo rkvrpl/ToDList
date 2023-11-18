@@ -10,10 +10,10 @@ const createTask = () => {
     taskInput.value = '';
 };
 
-const checkTask = () => {
-    if (evt.target.tagName === 'LI') {
-    taskList.classList.toggle('completed');
-    };
+const checkTask = (evt) => {
+    if (evt.target.tagName === "LI") {
+        evt.target.classList.toggle("completed");
+    }
 };
 
 addButton.addEventListener("click", createTask);
