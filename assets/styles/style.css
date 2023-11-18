@@ -31,4 +31,8 @@ body{
 }
 #taskList{
     font-family: 'Comfortaa', sans-serif;
+    margin: 2vw auto 1vw auto;
 }
+.completed {
+    text-decoration: line-through;
+    }
