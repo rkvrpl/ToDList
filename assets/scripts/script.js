@@ -5,9 +5,11 @@ const addButton = document.getElementById('addButton');
 const createTask = () => {
     const text = taskInput.value;
     const newElement = document.createElement('li');
+    if (taskInput.value.trim().length) {
     newElement.textContent = text;
     taskList.append(newElement);
     taskInput.value = '';
+}
 };
 
 const checkTask = (evt) => {
@@ -15,6 +17,7 @@ const checkTask = (evt) => {
         evt.target.classList.toggle("completed");
     }
 };
+
 
 addButton.addEventListener("click", createTask);
 taskList.addEventListener("click", checkTask);
